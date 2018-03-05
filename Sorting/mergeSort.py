@@ -4,7 +4,6 @@
 # First subarray is arr[l..m]
 # Second subarray is arr[m+1..r]
 def merge(arr, l, m, r):
-    count=0
     n1 = m - l + 1
     n2 = r- m
  
@@ -31,7 +30,6 @@ def merge(arr, l, m, r):
         else:
             arr[k] = R[j]
             j += 1
-            count=count+(m-i)
         k += 1
  
     # Copy the remaining elements of L[], if there
@@ -47,12 +45,10 @@ def merge(arr, l, m, r):
         arr[k] = R[j]
         j += 1
         k += 1
-    print count
  
 # l is for left index and r is right index of the
 # sub-array of arr to be sorted
 def mergeSort(arr,l,r):
-    count=0
     if l < r:
  
         # Same as (l+r)/2, but avoids overflow for
@@ -63,6 +59,5 @@ def mergeSort(arr,l,r):
         mergeSort(arr, l, m)
         mergeSort(arr, m+1, r)
         merge(arr, l, m, r)
-        #print count
-        return arr
-    #print count
+    return arr
+    
