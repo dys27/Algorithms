@@ -1,3 +1,3 @@
 # Algorithms
 
-Sorting,searching,greedy,dynamic etc
+Sorting,greedy,divide and conquer,dynamic programming etc
