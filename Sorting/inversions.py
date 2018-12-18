@@ -1,11 +1,11 @@
-def MergeSortInversions(arr):
+def merge_sort_inversions(arr):
     if len(arr)==1:
         return arr,0
     else:
         a=arr[:len(arr)/2]
         b=arr[len(arr)/2:]
-        a,ai=MergeSortInversions(a)
-        b,bi=MergeSortInversions(b)
+        a,ai=merge_sort_inversions(a)
+        b,bi=merge_sort_inversions(b)
         c=[]
         i=0
         j=0
