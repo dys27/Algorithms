@@ -48,7 +48,7 @@ def merge(arr, l, m, r):
  
 # l is for left index and r is right index of the
 # sub-array of arr to be sorted
-def mergeSort(arr,l,r):
+def merge_sort(arr,l,r):
     if l < r:
  
         # Same as (l+r)/2, but avoids overflow for
@@ -56,8 +56,8 @@ def mergeSort(arr,l,r):
         m = (l+(r))/2
  
         # Sort first and second halves
-        mergeSort(arr, l, m)
-        mergeSort(arr, m+1, r)
+        merge_sort(arr, l, m)
+        merge_sort(arr, m+1, r)
         merge(arr, l, m, r)
     return arr
     
