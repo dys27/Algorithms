@@ -4,12 +4,14 @@ class Graph:
     
     def __init__(self):
         self.graph = defaultdict(list)
+        self.counter = 0
  
     def addEdge(self,u,v):
         self.graph[u].append(v)
+        self.counter += 1
  
     def BFS(self, s):
-        visited = [False]*(len(self.graph))
+        visited = [False]*self.counter*self.counter
         queue = []
         queue.append(s)
         visited[s] = True
