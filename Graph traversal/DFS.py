@@ -3,9 +3,11 @@ from collections import defaultdict
 class Graph:
     def __init__(self):
         self.graph = defaultdict(list)
+        self.counter = 0
     
     def addEdge(self,u,v):
         self.graph[u].append(v)
+        self.counter += 1
     
     def DFSUtil(self,v,visited):
         visited[v]= True
@@ -14,7 +16,7 @@ class Graph:
             if visited[i] == False:
                 self.DFSUtil(i, visited)
     def DFS(self,v):
-        visited = [False]*(len(self.graph))
+        visited = [False]* self.counter * self.counter
         self.DFSUtil(v,visited)
         
 g = Graph()
